@@ -24,11 +24,21 @@
     border-radius: 5px;
 }
 .tiempoElegido {
-    color: red;
-    background-color: yellow;
+    color: rgb(244, 244, 246);
+    background-color: rgb(12, 105, 235);
     border-radius: 3%;
-    border: 0.5px black solid;
+    border: 0.5px rgb(237, 233, 233) solid;
     height: 30px;
     text-align: center;
     justify-content: center;
+}
+#tiempoAlerta {
+    color: rgb(244, 244, 246);
+    background-color: rgb(12, 105, 235);
+    border-radius: 3%;
+    border: 0.5px rgb(237, 233, 233) solid;
+    height: 30px;
+    text-align: center;
+    justify-content: center;
+    
 }

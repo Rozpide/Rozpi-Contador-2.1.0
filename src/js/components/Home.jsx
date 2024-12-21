@@ -67,8 +67,8 @@ const Home = () => {
 				<button className="btn btn-primary" onClick={resumirContador}>Continuar</button>
 			</div>
 			<div className="mt-3">
-				<label htmlFor="tiempoAlerta" className="tiempoElegido">Tiempo para la alerta en segundos:_</label>
-				<input type='number' id='tiempoAlerta' onChange={manejarCambioAlerta} />
+				<label htmlFor="tiempoAlerta" className="tiempoElegido">Tiempo alerta:_</label>
+				<input type='number' id='tiempoAlerta' onChange={manejarCambioAlerta} placeholder="Indique segundos:"/>
 			</div>
 		</div>
 	);
