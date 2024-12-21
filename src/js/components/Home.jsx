@@ -1,5 +1,6 @@
 import React, {useState,useEffect,useRef} from "react";
 import SecondsCounter from "./SecondsCounter";
+import './SecondsCounter.css'
 
 
 //create your first component
