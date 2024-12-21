@@ -55,6 +55,34 @@ const Home = () => {
 
 	// funcion para controlar el cambio en el tiempo de la alerta
 	const manejarCambioAlerta = (elemento) => setTiempoAlerta (Number(elemento.target.value));
+document.addEventListener("DOMContentLoaded", function() {
+  // Tiempo total en segundos
+  const totalTime = 60;
+  let timeRemaining = totalTime;
+
+  // Elementos del DOM
+  const progressBar = document.getElementById("progress-bar");
+  const countdown = document.getElementById("countdown");
+
+  // Función para actualizar la barra de progreso y el contador inverso
+  const updateProgress = () => {
+    // Calcular el porcentaje de progreso
+    const progressPercent = (timeRemaining / totalTime) * 100;
+    // Actualizar el ancho de la barra de progreso
+    progressBar.style.width = progressPercent + "%";
+    // Actualizar el contador inverso
+    countdown.textContent = timeRemaining;
+    // Restar un segundo
+    timeRemaining -= 1;
+    // Si el tiempo restante es cero, detener el intervalo
+    if (timeRemaining < 0) {
+      clearInterval(interval);
+    }
+  };
+
+  // Iniciar el intervalo para el contador inverso
+  const interval = setInterval(updateProgress, 1000);
+});
 
 
 
@@ -67,9 +95,12 @@ const Home = () => {
 				<button className="btn btn-primary" onClick={resumirContador}>Continuar</button>
 			</div>
 			<div className="mt-3">
-				<label htmlFor="tiempoAlerta" className="tiempoElegido">Tiempo alerta:_</label>
-				<input type='number' id='tiempoAlerta' onChange={manejarCambioAlerta} placeholder="Indique segundos:"/>
+				<label htmlFor="tiempoAlerta" className="btn btn-primary">Tiempo alerta :_</label>
+				<input type='number' className='tiempoAlerta' onChange={manejarCambioAlerta} placeholder="Indique segundos:"/>
+				
 			</div>
+			
+			
 		</div>
 	);
 };

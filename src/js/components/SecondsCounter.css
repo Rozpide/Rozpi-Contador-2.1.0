@@ -26,17 +26,17 @@
 .tiempoElegido {
     color: rgb(244, 244, 246);
     background-color: rgb(12, 105, 235);
-    border-radius: 3%;
-    border: 0.5px rgb(237, 233, 233) solid;
-    height: 30px;
+    border-radius: 10%;
+    border: 0.5px rgba(28, 2, 2, 0.792);
+    height: 35px;
     text-align: center;
     justify-content: center;
+    
 }
-#tiempoAlerta {
-    color: rgb(244, 244, 246);
-    background-color: rgb(12, 105, 235);
+.tiempoAlerta {
+    color: rgb(9, 9, 102);
     border-radius: 3%;
-    border: 0.5px rgb(237, 233, 233) solid;
+    border: 0px rgb(237, 233, 233) solid;
     height: 30px;
     text-align: center;
     justify-content: center;
